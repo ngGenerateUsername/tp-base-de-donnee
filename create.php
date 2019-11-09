@@ -19,12 +19,15 @@
         <div class="form-group">
             <label for="nom">nom: </label>
             <input type="text" class="form-control" name="nom">
-        </div></div>
+        </div>
+        </div>
         <div class="col">
         <div class="form-group">
             <label for="prenom">prenom: </label>
             <input type="text" class="form-control" name="prenom">
-        </div></div></div>
+        </div>
+        </div>
+        </div>
         <div class="row">
             <div class="col">
         <div class="form-group">
