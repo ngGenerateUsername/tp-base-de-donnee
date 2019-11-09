@@ -12,8 +12,8 @@
         <div class="jumbotron">
             <h1 class="alert alert-primary text-center">afficher <a href="create.php" style="text-decoration:none"> les etudient</a></h1>
       
-      <table class="table table-dark">
-  <thead>
+      <table class="table table">
+  <thead class="thead-dark">
     <tr>
       <th scope="col">id</th>
       <th scope="col">FirstName</th>
