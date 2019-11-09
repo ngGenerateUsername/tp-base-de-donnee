@@ -38,7 +38,7 @@
         <div class="form-group">
             <label for="phone">phone: </label>
             <input type="text" class="form-control" name="phone">
-        </div></div> </div>
+        </div> </div> </div>
         <div class="row">
         <div class="col">
         <button type="submit" class="btn btn-danger">AJOUT</button></div></div>
