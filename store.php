@@ -1,10 +1,15 @@
 <?php
 include 'bdconnexion.php';
-$nom = htmlspecialchars($_POST['nom']);
-$prenom = htmlspecialchars($_POST['prenom']);
-$email = htmlspecialchars($_POST['email']);
-$phone = htmlspecialchars($_POST['phone']);
-$rep = $bdd->prepare("INSERT INTO students(firstname, lastname, email, phone) VALUES ('$nom','$prenom','$email','$phone')");
+
+$nom = $_POST['nom'];
+$prenom = $_POST['prenom'];
+$email = $_POST['email'];
+$phone = $_POST['phone'];
+$rep = $bdd->prepare("INSERT INTO students(firstname, lastname, email, phone) VALUES (:nom, :prenom,:email, :phone)");
+$rep->bindParam(':nom',$nom);
+$rep->bindParam(':prenom',$prenom);
+$rep->bindParam(':email',$email);
+$rep->bindParam(':phone',$phone);
 $rep->execute();
-require 'create.php';
+header('Location:index.php');
 ?>

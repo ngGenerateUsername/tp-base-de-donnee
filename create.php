@@ -11,34 +11,34 @@
     <br>
     <br>
     <br>
-    <div class="container jumbotron">
-       
+    <div class="container jumbotron text-center">
+    <h3>AJOUT DES <a href="index.php" style="text-decoration:none"> ETUDIANT</a></h3>
+    </div>
+    <div class="container jumbotron py-3">
+      
     <form action="store.php" method="POST">
          <div class="row">
         <div class="col">
         <div class="form-group">
             <label for="nom">nom: </label>
-            <input type="text" class="form-control" name="nom">
-        </div>
-        </div>
+            <input type="text" name="nom" class="form-control" required>
+        </div></div>
         <div class="col">
         <div class="form-group">
             <label for="prenom">prenom: </label>
-            <input type="text" class="form-control" name="prenom">
-        </div>
-        </div>
-        </div>
+            <input type="text" class="form-control" name="prenom" required>
+        </div></div></div>
         <div class="row">
             <div class="col">
         <div class="form-group">
             <label for="email">email: </label>
-            <input type="text" class="form-control" name="email">
+            <input type="text" class="form-control" name="email" required>
         </div></div>
         <div class="col">
         <div class="form-group">
             <label for="phone">phone: </label>
-            <input type="text" class="form-control" name="phone">
-        </div> </div> </div>
+            <input type="number" class="form-control" name="phone" required>
+        </div></div> </div>
         <div class="row">
         <div class="col">
         <button type="submit" class="btn btn-danger">AJOUT</button></div></div>

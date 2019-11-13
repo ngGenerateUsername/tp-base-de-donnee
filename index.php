@@ -6,20 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <title>Document</title>
+
 </head>
-<body style="margin:0">
-     <div class="container">
+<body>
+     <div class="container py-3">
         <div class="jumbotron">
-            <h1 class="alert alert-primary text-center">afficher <a href="create.php" style="text-decoration:none"> les etudient</a></h1>
-      
-      <table class="table table">
-  <thead class="thead-dark">
+            <h1 class="alert alert-primary text-center">AFFICHAGE DES ETUDIENTS</a></h1>
+            </div>
+            <a href="create.php"> <button class="btn btn-primary">AJOUT</button> </a>
+            <br/> <br>
+      <table class="table">
+  <thead class="thead thead-dark">
     <tr>
       <th scope="col">id</th>
       <th scope="col">FirstName</th>
       <th scope="col">LastName</th>
       <th scope="col">email</th>
       <th scope="col">phone</th>
+       <th scope="col">OPTION</th>
     </tr>
   </thead>
  <tbody>
@@ -39,13 +43,15 @@
       <td><?php echo $dn['lastname'];?></td>
       <td><?php echo $dn['email'];?></td>
       <td><?php echo $dn['phone'];?></td>
+      <td><a style="text-decoration:none" href="edit.php?id=<?=$dn['id'] ?>"> modifier</a>&nbsp; <a style="text-decoration:none" href="supprimer.php?id=<?=$dn['id']?>">supprimer</a> </td>
+      
     </tr>
  <?php } ?>
   </tbody>
 </table>
 
 
-        </div>
+        
     </div>
          
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
