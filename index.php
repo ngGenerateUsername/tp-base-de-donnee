@@ -29,9 +29,11 @@
  <tbody>
   
       <?php 
-         include 'bdconnexion.php';
-         $rep = $bdd->query('SELECT * FROM students');
-         while($dn = $rep->fetch())
+         include 'classe/etudiant.class.php';
+         $e = new Etudiant;
+         $list=$e->getAall();
+
+         while($dn=$list->fetch())
          {
              
       ?>

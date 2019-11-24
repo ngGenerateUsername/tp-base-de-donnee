@@ -1,11 +1,11 @@
 <?php
-    include 'bdconnexion.php';
+    include 'classe/etudiant.class.php';
     $id = $_POST['id'];
     $firstname = $_POST['nom'];
     $lastname = $_POST['prenom'];
     $email = $_POST['email'];
     $phone = $_POST['phone'];
-    $rep=$bdd->prepare("UPDATE students SET firstname ='$firstname', lastname = '$lastname', email = '$email', phone = '$phone ' WHERE id = '$id'");
-    $rep->execute();
+    $e=new Etudiant;
+    $e->update($id,$firstname,$lastname,$email,$phone);
     header('Location:index.php');
 ?>

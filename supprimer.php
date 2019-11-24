@@ -1,9 +1,8 @@
 <?php
-include 'bdconnexion.php';
+include 'classe/etudiant.class.php';
+$e=new Etudiant;
+$e->delete($_GET['id']);
+header('location:index.php');
 
-$req = $bdd->prepare("DELETE FROM students WHERE id=:id ");
-$req->bindParam(':id',$_GET['id']);
-$req->execute();
-header('Location:index.php');
 
 ?>

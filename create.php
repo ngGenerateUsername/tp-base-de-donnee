@@ -44,6 +44,7 @@
         <button type="submit" class="btn btn-danger">AJOUT</button></div></div>
    
    </form>
+    
    </div>
 </body>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>

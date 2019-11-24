@@ -1,15 +1,8 @@
 <?php
-include 'bdconnexion.php';
+include 'classe/etudiant.class.php';
 
-$nom = $_POST['nom'];
-$prenom = $_POST['prenom'];
-$email = $_POST['email'];
-$phone = $_POST['phone'];
-$rep = $bdd->prepare("INSERT INTO students(firstname, lastname, email, phone) VALUES (:nom, :prenom,:email, :phone)");
-$rep->bindParam(':nom',$nom);
-$rep->bindParam(':prenom',$prenom);
-$rep->bindParam(':email',$email);
-$rep->bindParam(':phone',$phone);
-$rep->execute();
+$e=new Etudiant;
+$e->insert($_POST['nom'],$_POST['prenom'],$_POST['email'],$_POST['phone']);
+
 header('Location:index.php');
 ?>

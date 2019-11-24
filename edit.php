@@ -1,9 +1,10 @@
 <?php
-include 'bdconnexion.php';
-$req=$bdd->prepare('SELECT * FROM students WHERE id=:id');
-$req->bindParam(':id',$_GET['id']);
-$req->execute();
-$dn=$req->fetch();
+include 'classe/etudiant.class.php';
+$e=new Etudiant;
+$res=$e->getById($_GET['id']);
+
+$dn=$res->fetch();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
